@@ -1,9 +1,8 @@
-// import { useState } from 'react';
 import Book from '../book/Book';
 
-const BookList = (props) => (
+const BookList = () => (
   <div className="bookscontainer">
-    <Book />
+    <Book title="The Davinci Code" author="Dan Brown" />
   </div>
 );
 

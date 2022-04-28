@@ -1,7 +1,10 @@
-const Book = (props) => (
-  <div className="bookscontainer">
-    <h1>THis is one book</h1>
-  </div>
-);
+const Book = (props) => {
+  const { title, author } = props;
+  return (
+    <p>
+      {title} by {author}
+    </p>
+  );
+};
 
 export default Book;
