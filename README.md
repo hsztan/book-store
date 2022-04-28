@@ -12,9 +12,8 @@
 - React
 - Redux
 
-## Live Version
-- [Heroku](https://math-magicians-hdev.netlify.app/)
-- [Netlify](https://math-magicians-hdev.netlify.app/)
+## Live Demo
+- [Netlify](https://book-store-hsztan.netlify.app/)
 
 ## Setup
 
