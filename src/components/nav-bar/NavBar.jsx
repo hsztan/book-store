@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Header = (props) => (
+const Header = () => (
   <div className="bookscontainer">
     <ul>
       <li>
