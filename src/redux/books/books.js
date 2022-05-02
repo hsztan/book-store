@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const ADD_BOOK = 'book/ADD_BOOK';
-const DELETE_BOOK = 'book/DELETE_BOOK';
+const ADD_BOOK = 'bookstore/book/ADD_BOOK';
+const DELETE_BOOK = 'bookstore/book/DELETE_BOOK';
 
 const initialState = [];
 

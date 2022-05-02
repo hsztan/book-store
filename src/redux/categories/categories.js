@@ -1,4 +1,4 @@
-const CHECK_STATUS = 'category/CHECK_STATUS';
+const CHECK_STATUS = 'bookstore/category/CHECK_STATUS';
 
 const initialState = [];
 
