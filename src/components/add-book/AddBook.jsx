@@ -17,9 +17,9 @@ const AddBook = () => {
       <form onSubmit={handleSubmit}>
         <h2>Add a Book</h2>
         <p>Title:</p>
-        <input type="text" id="title" placeholder="Add Title" />
+        <input type="text" id="title" placeholder="Add Title" required />
         <p>Author:</p>
-        <input type="text" id="author" placeholder="Add Author" />
+        <input type="text" id="author" placeholder="Add Author" required />
         <button type="submit">Add Book</button>
       </form>
     </div>
