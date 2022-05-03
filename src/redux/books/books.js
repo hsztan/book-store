@@ -21,11 +21,11 @@ export default function reducer(state = initialState, action = {}) {
   }
 }
 
-export function addBook(title = '', author = '') {
+export function addBook(book) {
   const id = uuidv4();
   return {
     type: ADD_BOOK,
-    data: { title, author, id },
+    data: { ...book, id },
   };
 }
 
