@@ -15,7 +15,7 @@ export default function reducer(state = initialState, action = {}) {
     case ADD_BOOK:
       return [...state, action.data];
     case DELETE_BOOK:
-      return state.filter((book) => book.id !== action.data.id);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
