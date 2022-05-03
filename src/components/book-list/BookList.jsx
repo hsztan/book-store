@@ -3,7 +3,6 @@ import Book from '../book/Book';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
-  console.log(books);
   return (
     <div className="bookscontainer">
       {books.map((book) => (
