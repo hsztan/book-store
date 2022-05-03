@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { title, author } = props;
+  const { book } = props;
   return (
     <li className="book">
       <p>
-        {title}
+        {book.title}
         by
-        {author}
+        {book.author}
       </p>
       <button type="button">Remove</button>
     </li>
@@ -17,6 +17,9 @@ const Book = (props) => {
 export default Book;
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  book: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
 };
