@@ -9,7 +9,6 @@ const AddBook = () => {
     const { target } = e;
     const title = target.title.value;
     const author = target.author.value;
-    console.log(title, author);
     dispatch(addBook({ title, author }));
   };
 
