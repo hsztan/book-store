@@ -44,7 +44,8 @@ export const addBook = (book) => async (dispatch) => {
 
 export const removeBook = (id) => async (dispatch) => {
   try {
-    await deleteBook(id);
+    const response = await deleteBook(id);
+    console.log(response);
     return dispatch(getBooks());
   } catch (err) {
     return err;
