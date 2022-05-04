@@ -36,7 +36,8 @@ export const getBooks = () => async (dispatch) => {
 export const addBook = (book) => async (dispatch) => {
   try {
     await createBook(book);
-    return dispatch(getBooks());
+    dispatch(getBooks());
+    return true;
   } catch (err) {
     return err;
   }
@@ -45,7 +46,11 @@ export const addBook = (book) => async (dispatch) => {
 export const removeBook = (id) => async (dispatch) => {
   try {
     await deleteBook(id);
-    return dispatch(getBooks());
+    dispatch({
+      type: DELETE_BOOK,
+      id,
+    });
+    return true;
   } catch (err) {
     return err;
   }
