@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action = {}) {
     case ADD_BOOK:
       return [...state, action.payload];
     case DELETE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.item_id !== action.id);
     default:
       return state;
   }
@@ -37,7 +37,6 @@ export const getBooks = () => async (dispatch) => {
 export const addBook = (book) => async (dispatch) => {
   try {
     const newBook = await createBook({ ...book, item_id: uuidv4() });
-    console.log('created book', newBook);
     dispatch({
       type: ADD_BOOK,
       payload: newBook,
