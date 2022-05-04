@@ -9,7 +9,9 @@ const AddBook = () => {
     const { target } = e;
     const title = target.title.value;
     const author = target.author.value;
-    dispatch(addBook({ title, author }));
+    dispatch(addBook({ title, author, category: '' }));
+    target.title.value = '';
+    target.author.value = '';
   };
 
   return (
