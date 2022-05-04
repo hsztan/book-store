@@ -40,9 +40,11 @@ export const deleteBook = async (id) => {
     const res = await fetch(
       `${bookEndpoint}/${id}`, {
         method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ item_id: id }),
       },
     );
-    if (res.status === 200) {
+    if (res.status === 201) {
       return true;
     }
   } catch (err) {
