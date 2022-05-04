@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { fetchBooks, createBook, deleteBook } from './books-api';
 
 const ADD_BOOK = 'bookstore/book/ADD_BOOK';
@@ -11,7 +12,7 @@ export default function reducer(state = initialState, action = {}) {
     case GET_BOOKS:
       return [...state, ...action.payload];
     case ADD_BOOK:
-      return [...state, action.data];
+      return [...state, action.payload];
     case DELETE_BOOK:
       return state.filter((book) => book.id !== action.id);
     default:
@@ -35,8 +36,12 @@ export const getBooks = () => async (dispatch) => {
 
 export const addBook = (book) => async (dispatch) => {
   try {
-    await createBook(book);
-    dispatch(getBooks());
+    const newBook = await createBook({ ...book, item_id: uuidv4() });
+    console.log('created book', newBook);
+    dispatch({
+      type: ADD_BOOK,
+      payload: newBook,
+    });
     return true;
   } catch (err) {
     return err;

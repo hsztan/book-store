@@ -6,6 +6,7 @@ import Book from '../book/Book';
 const BookList = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
+  console.log(books);
 
   useEffect(() => {
     dispatch(getBooks());
@@ -16,7 +17,7 @@ const BookList = () => {
   return (
     <div className="bookscontainer">
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <Book key={book.item_id} book={book} />
       ))}
     </div>
   );
