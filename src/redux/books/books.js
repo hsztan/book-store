@@ -10,7 +10,7 @@ const initialState = [];
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case GET_BOOKS:
-      return [...state, ...action.payload];
+      return [...action.payload];
     case ADD_BOOK:
       return [...state, action.payload];
     case DELETE_BOOK:
