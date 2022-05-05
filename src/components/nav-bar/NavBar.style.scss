@@ -15,14 +15,16 @@
     list-style: none;
 
     li {
-      margin-right: 20px;
+      margin-right: 2.5rem;
     }
 
-    #logo a {
-      font-size: 1.875rem;
-      font-weight: bold;
-      color: #0290ff;
+    #logo{
       margin-right: 3rem;
+      a {
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: #0290ff;
+      }
     }
 
     #user {
