@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6.25rem;
+  height: 6.25rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1;
+
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    li {
+      margin-right: 20px;
+    }
+
+    #logo a {
+      font-size: 1.875rem;
+      font-weight: bold;
+      color: #0290ff;
+      margin-right: 3rem;
+    }
+
+    #user {
+      margin-left: auto;
+
+      div {
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #0290ff;
+  }
+
+  .link {
+    &-active {
+      color: #121212;
+    }
+    &-inactive {
+      color: #888;
+    }
+  }
+}

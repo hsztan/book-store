@@ -6,7 +6,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
   const { book } = props;
   return (
-    <li className="book">
+    <li className="book-card">
       <p>
         {book.title}
         &nbsp; by &nbsp;
