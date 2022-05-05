@@ -7,14 +7,44 @@ const Book = (props) => {
   const { book } = props;
   return (
     <li className="book-card">
-      <p>
-        {book.title}
-        &nbsp; by &nbsp;
-        {book.author}
-      </p>
-      <button onClick={() => dispatch(removeBook(book.item_id))} type="button">
-        Remove
-      </button>
+      <div className="info">
+        <h3 className="title">{book.title}</h3>
+        <p className="author">{book.author}</p>
+        <div className="actions">
+          <button type="button" className="btn btn-primary">
+            Comments
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => dispatch(removeBook(book.item_id))}
+          >
+            Remove
+          </button>
+          <button type="button" className="btn btn-secondary">
+            Edit
+          </button>
+        </div>
+        <div className="progress">
+          <div
+            className="progress-bar"
+            role="progressbar"
+            style={{ width: '75%' }}
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            75%
+          </div>
+          <div className="chapter">
+            <p>CURRENT CHAPTER</p>
+            <span className="chapter-name">Chapter 1</span>
+            <button type="button" className="update">
+              Update Progress
+            </button>
+          </div>
+        </div>
+      </div>
     </li>
   );
 };
