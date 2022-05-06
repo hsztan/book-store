@@ -4,7 +4,7 @@ const ProgressBar = () => (
   <div className="progress">
     <div className="circular">
       <div className="inner" />
-      <div className="number">50%</div>
+      <div className="number" />
       <div className="circle">
         <div className="bar left">
           <div className="progress" />
@@ -13,6 +13,10 @@ const ProgressBar = () => (
           <div className="progress" />
         </div>
       </div>
+    </div>
+    <div className="value">
+      <h3>75%</h3>
+      <p>Completed</p>
     </div>
   </div>
 );

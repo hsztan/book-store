@@ -4,6 +4,21 @@
   $size-inner: calc($size * .80);
   $animation-time: 2s;
 
+  display: flex;
+
+  .value {
+    padding-left: 1rem;
+    h3 {
+      color: #121212;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+    p {
+      font-size: .9rem;
+      color: #8e8e8e;
+    }
+  }
+
   .circular {
     height: $size;
     width: $size;
