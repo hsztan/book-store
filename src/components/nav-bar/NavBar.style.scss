@@ -8,6 +8,12 @@
   border-bottom: 1px solid #e5e5e5;
   z-index: 1;
 
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #0290ff;
+  }
+
   ul {
     width: 100%;
     display: flex;
@@ -18,8 +24,9 @@
       margin-right: 2.5rem;
     }
 
-    #logo{
+    #logo {
       margin-right: 3rem;
+
       a {
         font-size: 1.875rem;
         font-weight: bold;
@@ -28,7 +35,7 @@
     }
 
     #user {
-      color:#0290ff;
+      color: #0290ff;
       margin-left: auto;
 
       div {
@@ -43,16 +50,11 @@
     }
   }
 
-  a {
-    font-size: 0.8rem;
-    text-decoration: none;
-    color: #0290ff;
-  }
-
   .link {
     &-active {
       color: #121212;
     }
+
     &-inactive {
       color: #888;
     }

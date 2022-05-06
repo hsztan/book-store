@@ -1,9 +1,10 @@
 .bookscontainer {
   $medium-blue: #307bbe;
   $azure: #0290ff;
+
   font-family: 'Roboto Slab', serif;
   padding: 1rem 3rem;
-  
+
   ul {
     width: 100%;
     display: flex;
@@ -22,44 +23,48 @@
       padding: 2rem 1.5rem;
       border-radius: 4px;
 
+      .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1rem;
+
+        button {
+          font-family: inherit;
+          font-weight: 300;
+          font-size: 0.875rem;
+          color: #4386bf;
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+        }
+
+        .separator {
+          height: 1.5rem;
+          border: 0.5px solid #e5e5e5;
+        }
+      }
+
       .info {
         width: 20%;
+
         .category {
           color: #8a8a8a;
           font-size: 0.875rem;
           font-weight: bold;
         }
+
         .title {
           font-size: 1.375rem;
           font-weight: bold;
           color: #121212;
         }
+
         .author {
           font-weight: 300;
           font-size: 0.875rem;
           color: #4386bf;
-        }
-        .actions {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          margin-top: 1rem;
-
-          button {
-            font-family: inherit;
-            font-weight: 300;
-            font-size: 0.875rem;
-            color: #4386bf;
-            background-color: #fff;
-            border: none;
-            cursor: pointer;
-          }
-
-          .separator {
-            height: 1.5rem;
-            border: 0.5px solid #e5e5e5;
-          }
         }
       }
 
@@ -77,17 +82,20 @@
         &-info {
           display: flex;
           flex-direction: column;
+
           p {
-            color:#121212;
+            color: #121212;
             opacity: 0.5;
             font-size: 0.813rem;
             font-weight: 300;
           }
+
           .chapter-name {
             margin-top: 0.5rem;
             font-size: 1rem;
             font-weight: 300;
           }
+
           button {
             width: 11rem;
             margin-top: 1.4rem;
