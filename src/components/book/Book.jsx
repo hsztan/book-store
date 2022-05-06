@@ -9,6 +9,7 @@ const Book = (props) => {
   return (
     <li className="book-card">
       <div className="info">
+        <p className="category">General</p>
         <h3 className="title">{book.title}</h3>
         <p className="author">{book.author}</p>
 
@@ -30,6 +31,7 @@ const Book = (props) => {
       </div>
 
       <ProgressBar />
+
       <div className="chapter">
         <p>CURRENT CHAPTER</p>
         <span className="chapter-name">Chapter 1</span>
