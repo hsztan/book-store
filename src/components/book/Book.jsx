@@ -17,6 +17,7 @@ const Book = (props) => {
           <button type="button" className="btn btn-primary">
             Comments
           </button>
+          <span className="separator" />
           <button
             type="button"
             className="btn btn-danger"
@@ -24,6 +25,7 @@ const Book = (props) => {
           >
             Remove
           </button>
+          <span className="separator" />
           <button type="button" className="btn btn-secondary">
             Edit
           </button>
@@ -33,11 +35,14 @@ const Book = (props) => {
       <ProgressBar />
 
       <div className="chapter">
-        <p>CURRENT CHAPTER</p>
-        <span className="chapter-name">Chapter 1</span>
-        <button type="button" className="update">
-          Update Progress
-        </button>
+        <span className="separator-chapter" />
+        <div className="chapter-info">
+          <p>CURRENT CHAPTER</p>
+          <span className="chapter-name">Chapter 1</span>
+          <button type="button" className="update">
+            Update Progress
+          </button>
+        </div>
       </div>
     </li>
   );

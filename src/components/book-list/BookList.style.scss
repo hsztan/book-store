@@ -1,5 +1,6 @@
 .bookscontainer {
   $medium-blue: #307bbe;
+  $azure: #0290ff;
   font-family: 'Roboto Slab', serif;
   padding: 1rem 3rem;
   
@@ -22,6 +23,7 @@
       border-radius: 4px;
 
       .info {
+        width: 20%;
         .category {
           color: #8a8a8a;
           font-size: 0.875rem;
@@ -33,12 +35,71 @@
           color: #121212;
         }
         .author {
+          font-weight: 300;
           font-size: 0.875rem;
           color: #4386bf;
+        }
+        .actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 1rem;
+
+          button {
+            font-family: inherit;
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: #4386bf;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+          }
+
+          .separator {
+            height: 1.5rem;
+            border: 0.5px solid #e5e5e5;
+          }
         }
       }
 
       .chapter {
+        width: 30%;
+        display: flex;
+
+        .separator-chapter {
+          height: 4.25rem;
+          border: 0.5px solid #e5e5e5;
+          margin-right: 3.6rem;
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          p {
+            color:#121212;
+            opacity: 0.5;
+            font-size: 0.813rem;
+            font-weight: 300;
+          }
+          .chapter-name {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+          button {
+            width: 11rem;
+            margin-top: 1.4rem;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-weight: 300;
+            color: #fff;
+            background-color: $azure;
+            border: none;
+            border-radius: 3px;
+            padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+          }
+        }
       }
     }
   }
