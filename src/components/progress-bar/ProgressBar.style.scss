@@ -1,0 +1,102 @@
+.progress {
+  $azure: #007bff;
+  $size: 4.25rem;
+  $size-inner: calc($size * 0.8);
+  $animation-time: 2s;
+
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+
+  .value {
+    padding-left: 1rem;
+
+    h3 {
+      color: #121212;
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #8e8e8e;
+    }
+  }
+
+  .circular {
+    height: $size;
+    width: $size;
+    position: relative;
+
+    .inner {
+      position: absolute;
+      z-index: 6;
+      top: 50%;
+      left: 50%;
+      height: $size-inner;
+      width: $size-inner;
+      margin: calc($size-inner/2 * -1) 0 0 calc($size-inner/2 * -1);
+      background: #fff;
+      border-radius: 100%;
+    }
+
+    .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      font-size: 18px;
+      font-weight: 500;
+      color: #4158d0;
+    }
+
+    .circle {
+      .bar {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #dbdbdb;
+        border-radius: 100%;
+        clip: rect(0, $size, $size, calc($size / 2));
+
+        .progress {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          clip: rect(0, calc($size / 2), $size, 0);
+          background: $azure;
+        }
+      }
+
+      .left {
+        .progress {
+          z-index: 1;
+          animation: left $animation-time linear both;
+        }
+
+        @keyframes left {
+          100% {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .right {
+        transform: rotate(180deg);
+        z-index: 3;
+
+        .progress {
+          animation: right $animation-time linear both;
+          animation-delay: $animation-time;
+        }
+
+        @keyframes right {
+          100% {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}

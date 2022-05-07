@@ -7,13 +7,11 @@ import Home from './pages/Home';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/categories" element={<Categories />} />
-        </Routes>
-      </header>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
     </div>
   );
 }

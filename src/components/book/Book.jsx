@@ -1,20 +1,49 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../../redux/books/books';
+import ProgressBar from '../progress-bar/ProgressBar';
 
 const Book = (props) => {
   const dispatch = useDispatch();
   const { book } = props;
   return (
-    <li className="book">
-      <p>
-        {book.title}
-        &nbsp; by &nbsp;
-        {book.author}
-      </p>
-      <button onClick={() => dispatch(removeBook(book.item_id))} type="button">
-        Remove
-      </button>
+    <li className="book-card">
+      <div className="info">
+        <p className="category">General</p>
+        <h3 className="title">{book.title}</h3>
+        <p className="author">{book.author}</p>
+
+        <div className="actions">
+          <button type="button" className="btn btn-primary">
+            Comments
+          </button>
+          <span className="separator" />
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={() => dispatch(removeBook(book.item_id))}
+          >
+            Remove
+          </button>
+          <span className="separator" />
+          <button type="button" className="btn btn-secondary">
+            Edit
+          </button>
+        </div>
+      </div>
+
+      <ProgressBar />
+
+      <div className="chapter">
+        <span className="separator-chapter" />
+        <div className="chapter-info">
+          <p>CURRENT CHAPTER</p>
+          <span className="chapter-name">Chapter 1</span>
+          <button type="button" className="update">
+            Update Progress
+          </button>
+        </div>
+      </div>
     </li>
   );
 };
